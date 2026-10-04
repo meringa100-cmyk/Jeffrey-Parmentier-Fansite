@@ -46,10 +46,10 @@
 </div>
 <div class="gallery-links"><a href="https://jeffreyparmentier.nl/" target="_blank">📸 Officiële site</a><a href="https://www.instagram.com/jeffreyparmentier/" target="_blank">📷 Instagram</a><a href="https://www.tiktok.com/@jeffrey.parmentier" target="_blank">🎬 TikTok</a></div>
 <div class="photo-modal" id="photoModal" onclick="closePhoto(event)"><button onclick="closePhoto()">×</button><img id="modalImg" src="" alt=""><div><button onclick="prevPhoto(event)">‹</button><span id="photoCount"></span><button onclick="nextPhoto(event)">›</button></div></div></div></section><section class="section light" id="moments"><div><div class="eyebrow">JP MOMENTS</div><h2>Wat voor fan ben jij?</h2><div class="moment-grid">
-<button onclick="moment(5)">🎺 Ik ga voor de trompet</button>
-<button onclick="moment(3)">🎧 Ik hou van de DJ-set</button>
-<button onclick="moment(4)">🎉 Ik ben bij de optredens</button>
-<button onclick="moment(2)">📱 Ik volg JP online</button>
+<button onclick="addFanChoice(5)">🎺 Ik ga voor de trompet</button>
+<button onclick="addFanChoice(3)">🎧 Ik hou van de DJ-set</button>
+<button onclick="addFanChoice(4)">🎉 Ik ben bij de optredens</button>
+<button onclick="addFanChoice(2)">📱 Ik volg JP online</button>
 </div><div class="rank-box"><span>JOUW FANRANG</span><b id="fanRank">Nieuwe fan ❤️</b><small id="rankText">Begin punten te verzamelen!</small></div></div></section>
 <section id="media" class="section dark"><div class="eyebrow">MEDIA</div><h2>Jeffrey in actie.</h2>
 <div class="videos">
@@ -81,7 +81,7 @@ showScore();
 updateRank();
 window.addEventListener("scroll",function(){const b=document.getElementById("topBtn");if(b)b.classList.toggle("show",window.scrollY>500)});
 function updateRank(){const s=Number(localStorage.getItem("jpscore")||0),e=document.getElementById("fanRank"),t=document.getElementById("rankText");if(!e)return;if(s>=50){e.textContent="🏆 Mega Fan";t.textContent="Je kent JP door en door!"}else if(s>=30){e.textContent="🎺 Superfan";t.textContent="Je bent goed op weg naar Mega Fan!"}else if(s>=15){e.textContent="❤️ Trouwe Fan";t.textContent="Lekker bezig, verzamel nog wat punten!"}else{e.textContent="🌟 Nieuwe Fan";t.textContent="Begin punten te verzamelen!"}}
-function moment(n){addScore(n);updateRank()}
+function addFanChoice(n){addScore(n);showScore();updateRank();}
 function addScore(n){let s=Number(localStorage.getItem("jpscore")||0)+n;localStorage.setItem("jpscore",s);updateRank();const e=document.getElementById("fanScore");if(e)e.textContent=s+" punten"}function showScore(){const e=document.getElementById("fanScore");if(e)e.textContent=Number(localStorage.getItem("jpscore")||0)+" punten"}function favoriteShow(){localStorage.setItem("jpfav","1");addScore(5);const e=document.getElementById("favText");if(e)e.textContent="Opgeslagen als favoriet ❤️"}
 const photos=[
 'https://jeffreyparmentier.nl/wp-content/uploads/2026/08/Jeffrey-Parmentier-Foto-2026.png',
