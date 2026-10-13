@@ -122,7 +122,7 @@ def main():
     updated, hero_count = hero_pattern.subn(hero_replacement, updated, count=1)
     if hero_count != 1:
         raise RuntimeError("Featured next-event card not found; refusing to publish.")
-    countdown_pattern = re.compile(r"function countdown\(\)\{.*?\}countdown\(\);setInterval\(countdown,60000\);", re.S)
+    countdown_pattern = re.compile(r"function countdown\(\)\{.*?countdown\(\);setInterval\(countdown,60000\);", re.S)
     d = next_event["date"]
     # Use local midnight on the event date: the counter is a date countdown, not an asserted showtime.
     countdown_code = (
