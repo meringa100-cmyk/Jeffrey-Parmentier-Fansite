@@ -14,7 +14,7 @@
 <div class="tag">🎺 ONOFFICIËLE FANSITE</div>
 <h1>JEFFREY<br><span>PARMENTIER</span></h1>
 <p>Trompet, DJ, energie en feest. Een fanplek voor iedereen die Jeffrey Parmentier graag ziet optreden.</p>
-<div class="next-gig"><span>🎺 VOLGEND OPTREDEN</span><strong>Veluwe Fair</strong><small>18 okt 2026 · Ermelo</small><b id="countdown">Berekenen...</b></div><div class="fan-score"><span>⭐ JOUW JP-FAN SCORE</span><b id="fanScore">0 punten</b><small>Stemmen, quizzen en favorieten leveren punten op.</small></div><div class="fan-actions"><button onclick="favoriteShow()">❤️ <span id="favText">Bewaar dit optreden</span></button><button onclick="shareSite()">↗ Deel JP Fans</button></div>
+<div class="next-gig"><span>🎺 VOLGEND OPTREDEN</span><strong>Oktoberfest Nijeveen</strong><small>23 okt 2026 · NIJEVEEN</small><b id="countdown">Berekenen...</b></div><div class="fan-score"><span>⭐ JOUW JP-FAN SCORE</span><b id="fanScore">0 punten</b><small>Stemmen, quizzen en favorieten leveren punten op.</small></div><div class="fan-actions"><button onclick="favoriteShow()">❤️ <span id="favText">Bewaar dit optreden</span></button><button onclick="shareSite()">↗ Deel JP Fans</button></div>
 <a class="btn" href="#agenda">Bekijk agenda</a><a class="btn alt" href="#media">Bekijk video's</a>
 </div></section>
 
@@ -24,9 +24,8 @@
 <div class="stats"><div class="stat"><b>🎺</b>Live trompet</div><div class="stat"><b>🎧</b>DJ & feest</div><div class="stat"><b>🌍</b>Ook internationaal</div></div>
 </div></section>
 
-<section id="agenda" class="section dark"><div class="eyebrow">AGENDA</div><h2>Komende optredens</h2><p class="copy">Automatisch bijgewerkt op 18 October 2026 vanaf de <a href="https://jeffreyparmentier.nl/agenda/" target="_blank" rel="noopener">officiële agenda van Jeffrey</a>. Controleer bij twijfel altijd de officiële bron.</p><div class="shows">
-<div class="show next"><div class="date">18 OKT 2026 <span class="badge">VOLGEND</span></div><div><h3>Veluwe Fair</h3><p>Nationaal Hippisch Centrum · Ermelo</p></div></div>
-<div class="show"><div class="date">23 OKT 2026</div><div><h3>Oktoberfest Nijeveen</h3><p>Feesttent Nijeveen · NIJEVEEN</p></div></div>
+<section id="agenda" class="section dark"><div class="eyebrow">AGENDA</div><h2>Komende optredens</h2><p class="copy">Automatisch bijgewerkt op 19 October 2026 vanaf de <a href="https://jeffreyparmentier.nl/agenda/" target="_blank" rel="noopener">officiële agenda van Jeffrey</a>. Controleer bij twijfel altijd de officiële bron.</p><div class="shows">
+<div class="show next"><div class="date">23 OKT 2026 <span class="badge">VOLGEND</span></div><div><h3>Oktoberfest Nijeveen</h3><p>Feesttent Nijeveen · NIJEVEEN</p></div></div>
 <div class="show"><div class="date">24 OKT 2026</div><div><h3>Achterhoekse Piraten Party</h3><p>Koningshuus · Lievelde</p></div></div>
 <div class="show"><div class="date">24 OKT 2026</div><div><h3>MPF</h3><p>Megatent Maaskantje · Sint-Michielsgestel</p></div></div>
 <div class="show"><div class="date">30 OKT 2026</div><div><h3>Gruts Bierfest</h3><p>Feesttent Joop Sarsplein · Doetinchem</p></div></div>
@@ -127,7 +126,7 @@ function nextPhoto(e){e.stopPropagation();photoIndex=(photoIndex+1)%photos.lengt
 document.addEventListener("keydown",function(e){if(e.key==="Escape")closePhoto();if(e.key==="ArrowLeft")prevPhoto(e);if(e.key==="ArrowRight")nextPhoto(e)});
 function shareSite(){if(navigator.share){navigator.share({title:"JP Fans – Jeffrey Parmentier",text:"Bekijk de Jeffrey Parmentier fansite!",url:location.href})}else{navigator.clipboard.writeText(location.href);alert("Link gekopieerd!")}}
 if(localStorage.getItem("jpfav")==="1"){const e=document.getElementById("favText");if(e)e.textContent="Favoriet opgeslagen ❤️"}
-function countdown(){const el=document.getElementById('countdown');if(!el)return;const d=new Date('2026-10-18T00:00:00').getTime(),e=d-Date.now();if(e<=0){el.textContent='🎉 Vandaag!'}else{const days=Math.floor(e/86400000),h=Math.floor(e%86400000/3600000),m=Math.floor(e%3600000/60000);el.textContent=days+' dagen · '+h+' uur · '+m+' min'}}countdown();setInterval(countdown,60000);
+function countdown(){const el=document.getElementById('countdown');if(!el)return;const d=new Date('2026-10-23T00:00:00').getTime(),e=d-Date.now();if(e<=0){el.textContent='🎉 Vandaag!'}else{const days=Math.floor(e/86400000),h=Math.floor(e%86400000/3600000),m=Math.floor(e%3600000/60000);el.textContent=days+' dagen · '+h+' uur · '+m+' min'}}countdown();setInterval(countdown,60000);
 </script>
 <nav class="mobile-nav"><a href="#verhaal">🏠<span>Start</span></a><a href="#agenda">📅<span>Agenda</span></a><a href="#muziek">🎵<span>Muziek</span></a><a href="#media">▶️<span>Media</span></a><a href="#fans">❤️<span>Fans</span></a></nav>
 </body></html>
